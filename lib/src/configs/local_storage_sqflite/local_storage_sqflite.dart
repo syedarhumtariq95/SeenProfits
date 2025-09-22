@@ -124,9 +124,7 @@ class LocalStorageSqfLite {
   ///
   /// Args:
   ///   data: The data item to update.
-  static Future<void> updateData(
-    Data data,
-  ) async {
+  static Future<void> updateData(Data data) async {
     try {
       // Update the data item in the database.
       await _database.update(
@@ -148,11 +146,7 @@ class LocalStorageSqfLite {
   static Future<void> deleteData(String key) async {
     try {
       // Delete the data item from the database.
-      await _database.delete(
-        'data',
-        where: 'key = ?',
-        whereArgs: [key],
-      );
+      await _database.delete('data', where: 'key = ?', whereArgs: [key]);
     } catch (e) {
       // Print any error that occurs during data deletion.
       debugPrint(e.toString());

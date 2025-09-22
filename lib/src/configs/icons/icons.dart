@@ -55,12 +55,13 @@ class CustomIcons extends StatelessWidget {
 class CustomIconsPath {
   CustomIconsPath._();
 
-  /// Icon paths for onboarding screens
-  static const String apple = 'assets/icons/apple.svg';
-  static const String google = 'assets/icons/google.svg';
-  static const String nextIconWithText = 'assets/icons/nextIconWithText.svg';
+  ///Folders
+  final String folderAssets = 'assets';
+  final String folderIcons = 'icons';
 
-  /// Icon paths for general use
-  static const String notification = 'assets/icons/notification.svg';
-  static const String arrowDownTilted = 'assets/icons/downArrowTilted.svg';
+  ///iconsPath
+  final String calendar = 'calendar.svg';
+
+  ///Getters for custom Icons
+  String get calendarPath => '$folderAssets/$folderIcons/$calendar';
 }

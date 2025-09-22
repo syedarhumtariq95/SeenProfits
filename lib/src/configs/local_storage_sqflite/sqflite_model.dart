@@ -8,10 +8,7 @@ class Data {
   /// Args:
   ///   key: The unique key for the data item.
   ///   value: The value associated with the key.
-  Data({
-    required this.key,
-    required this.value,
-  });
+  Data({required this.key, required this.value});
 
   /// The unique key for the data item.
   final String key;
@@ -26,9 +23,6 @@ class Data {
   /// Returns:
   ///   A map representation of this [Data] instance.
   Map<String, dynamic> toMap() {
-    return {
-      'key': key,
-      'value': value,
-    };
+    return {'key': key, 'value': value};
   }
 }

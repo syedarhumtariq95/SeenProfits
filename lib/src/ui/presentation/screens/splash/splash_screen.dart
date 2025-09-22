@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/fonts_configs.dart';
+import '../../../../configs/app/fonts_configs.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

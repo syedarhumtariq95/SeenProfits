@@ -19,33 +19,21 @@ class Routes {
   ///
   /// Returns:
   ///   A [Route] with the fade-through transition.
-  static Route<T> fadeThrough<T>(RouteSettings settings, WidgetBuilder page,
-      {int duration = 300}) {
+  static Route<T> fadeThrough<T>(
+    RouteSettings settings,
+    WidgetBuilder page, {
+    int duration = 300,
+  }) {
     return PageRouteBuilder<T>(
       settings: settings,
       // Set the transition duration.
       transitionDuration: Duration(milliseconds: duration),
       // Build the page widget.
-      pageBuilder: (
-        context,
-        animation,
-        secondaryAnimation,
-      ) =>
-          page(
-        context,
-      ),
+      pageBuilder: (context, animation, secondaryAnimation) => page(context),
       // Define the transition animation.
-      transitionsBuilder: (
-        context,
-        animation,
-        secondaryAnimation,
-        child,
-      ) {
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
         // Use FadeScaleTransition for the fade-through effect.
-        return FadeScaleTransition(
-          animation: animation,
-          child: child,
-        );
+        return FadeScaleTransition(animation: animation, child: child);
       },
     );
   }

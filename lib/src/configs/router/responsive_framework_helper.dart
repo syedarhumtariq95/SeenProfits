@@ -47,7 +47,9 @@ class ResponsiveFrameworkHelper {
   /// Returns:
   ///   A `MaxWidthBox` with responsive adjustments.
   MaxWidthBox responsiveFrameworkMaxWidthBox(
-      BuildContext context, Widget child) {
+    BuildContext context,
+    Widget child,
+  ) {
     // Determine the responsive value based on the current breakpoint.
     final value = ResponsiveValue(
       context,
@@ -71,10 +73,11 @@ class ResponsiveFrameworkHelper {
       maxWidth: 1200,
       //background: Container(color: const Color(0xFFF5F5F5)),
       child: ResponsiveScaledBox(
-          // ResponsiveScaledBox renders its child with a FittedBox set to the `width` value.
-          // Set the fixed width value based on the active breakpoint.
-          width: value.toDouble(),
-          child: child),
+        // ResponsiveScaledBox renders its child with a FittedBox set to the `width` value.
+        // Set the fixed width value based on the active breakpoint.
+        width: value.toDouble(),
+        child: child,
+      ),
     );
   }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../ui/constants/fonts_configs.dart';
-import '../../ui/constants/theme_colors.dart';
+import '../app/fonts_configs.dart';
+import 'theme_colors.dart';
 import 'enums/theme_enum.dart';
 
 /// Configuration class for defining application themes.
@@ -40,7 +40,7 @@ class AppThemeConfig {
     scaffoldBackgroundColor: ThemeColors.kScaffoldBackgroundColor,
 
     /// Font family for the light theme.
-    fontFamily: FontsConfigs.sfProFonts,
+    fontFamily: FontsConfigs.poppinsFonts,
 
     /// App bar theme for the light theme.
     appBarTheme: const AppBarTheme(
@@ -83,7 +83,7 @@ class AppThemeConfig {
     colorScheme: const ColorScheme.dark(),
 
     /// Font family for the dark theme.
-    fontFamily: FontsConfigs.sfProFonts,
+    fontFamily: FontsConfigs.poppinsFonts,
 
     /// Input decoration theme for the dark theme.
     inputDecorationTheme: const InputDecorationTheme(
