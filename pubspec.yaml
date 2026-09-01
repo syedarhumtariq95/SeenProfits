@@ -1,12 +1,16 @@
-name: biotip_mobile_app
+name: seen_profits
 description: "A new Flutter project."
 publish_to: 'none'
+
 version: 1.0.0+1
+
 environment:
   sdk: ^3.8.1
+
 dependencies:
   flutter:
     sdk: flutter
+
   cupertino_icons: ^1.0.8
   flutter_bloc: ^9.0.0
   flutter_screenutil: ^5.9.3
@@ -23,60 +27,22 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^6.0.0
 
-  # Flutter Launcher Icons: Creates app launcher icons.
+  # Flutter Launcher Icons
   flutter_launcher_icons: ^0.14.3
 
-# Configuration for flutter_launcher_icons package.
 flutter_launcher_icons:
-  # Specifies if Android launcher icons should be generated.
   android: true
   ios: true
-  # The path to the image to use for the launcher icon.
   image_path: "assets/logo/logo.png"
-  # The background color for adaptive icons.
   adaptive_icon_background: "#ffffff"
-  # The foreground image for adaptive icons.
   adaptive_icon_foreground: "assets/logo/logo.png"
 
 flutter:
   uses-material-design: true
+
   assets:
     - assets/
     - assets/images/
     - assets/icons/
     - assets/images/onboarding/
     - assets/logo/
-    - assets/animations/
-    - assets/fonts/
-    - assets/dummy_images/
-  fonts:
-    - family: AbhayaLibre
-      fonts:
-        - asset: assets/fonts/Abhaya_Libre/AbhayaLibre-Bold.ttf
-        - asset: assets/fonts/Abhaya_Libre/AbhayaLibre-ExtraBold.ttf
-        - asset: assets/fonts/Abhaya_Libre/AbhayaLibre-Medium.ttf
-        - asset: assets/fonts/Abhaya_Libre/AbhayaLibre-Regular.ttf
-        - asset: assets/fonts/Abhaya_Libre/AbhayaLibre-SemiBold.ttf
-    - family: SoraBold
-      fonts:
-        - asset: assets/fonts/Sora_Bold/Sora-Bold.ttf
-        - asset: assets/fonts/Sora_Bold/Sora-ExtraBold.ttf
-        - asset: assets/fonts/Sora_Bold/Sora-ExtraLight.ttf
-        - asset: assets/fonts/Sora_Bold/Sora-Light.ttf
-        - asset: assets/fonts/Sora_Bold/Sora-Medium.ttf
-        - asset: assets/fonts/Sora_Bold/Sora-SemiBold.ttf
-        - asset: assets/fonts/Sora_Bold/Sora-Thin.ttf
-        - asset: assets/fonts/Sora_Bold/Sora-VariableFont_wght.ttf
-    - family: SfProDisplay
-      fonts:
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-Bold.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-BoldItalic.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-Heavy.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-HeavyItalic.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-Light.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-LightItalic.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-MediumItalic.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-Regular.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-RegularItalic.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-Semibold.ttf
-        - asset: assets/fonts/Sf_Pro_Display/SF-Pro-Text-SemiboldItalic.ttf
