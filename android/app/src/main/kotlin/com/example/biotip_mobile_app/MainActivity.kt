@@ -1,4 +1,4 @@
-package com.example.biotip_mobile_app
+package com.seenprofits.app
 
 import io.flutter.embedding.android.FlutterActivity
 

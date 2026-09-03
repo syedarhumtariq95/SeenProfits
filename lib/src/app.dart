@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:seen_profits/l10n/app_localizations.dart';
 
 import 'configs/app/screen_config.dart';
 import 'configs/bloc/bloc_initializer.dart';
@@ -54,6 +55,8 @@ class App extends StatelessWidget {
                 navigatorKey: DI.i<NavigationService>().navigationKey,
                 // Disable the debug banner.
                 debugShowCheckedModeBanner: false,
+                onGenerateTitle: (context) =>
+                    AppLocalizations.of(context)!.appName,
                 // Set the app's theme based on the current theme flavor.
                 theme: appThemeConfig.getThemeData(
                   ThemeBlocHelper.getCurrentThemeFlavor(context),

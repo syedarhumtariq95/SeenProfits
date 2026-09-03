@@ -30,7 +30,7 @@ class NavigationService {
   ///
   /// Args:
   ///   navigationFunc: A function that takes a BuildContext and performs navigation.
-  navigateTo(Function(BuildContext context) navigationFunc) {
+  void navigateTo(void Function(BuildContext context) navigationFunc) {
     // Execute the navigation function with the current context.
     navigationFunc(_navigatorKey.currentContext!);
   }

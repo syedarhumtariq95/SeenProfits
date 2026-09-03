@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:seen_profits/l10n/app_localizations.dart';
 
+import '../../../localization/locale_bloc/locale_bloc.dart';
 import '../../enums/theme_enum.dart';
 import '../../theme_config.dart';
 import '../themes_model/theme_bloc/theme_bloc.dart';
@@ -24,26 +26,25 @@ class ThemeBuilderWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     // Listen to the ThemeBloc for theme state changes.
     return BlocBuilder<ThemeBloc, ThemeState>(
-      builder: (context, themeState) {
-        // Determine the current theme based on the theme state.
-        final theme = (themeState is ThemeFetched)
-            ? AppThemeConfig().getThemeData(themeState.theme)
-            : AppThemeConfig().getThemeData(ThemeFlavor.Default);
-        // Build the MaterialApp with the determined theme.
-        return MaterialApp(
-          // Copy relevant properties from the original MaterialApp.
-          navigatorKey: child.navigatorKey,
-          debugShowCheckedModeBanner: child.debugShowCheckedModeBanner,
-          // Apply the calculated theme data.
-          theme: theme,
-          locale: child.locale,
-          supportedLocales: child.supportedLocales,
-          localizationsDelegates: child.localizationsDelegates,
-          builder: child.builder,
-          initialRoute: child.initialRoute,
-          onGenerateRoute: child.onGenerateRoute,
-        );
-      },
+      builder: (context, themeState) => BlocBuilder<LocaleBloc, LocaleState>(
+        builder: (context, localeState) {
+          final theme = (themeState is ThemeFetched)
+              ? AppThemeConfig().getThemeData(themeState.theme)
+              : AppThemeConfig().getThemeData(ThemeFlavor.Default);
+          return MaterialApp(
+            navigatorKey: child.navigatorKey,
+            debugShowCheckedModeBanner: child.debugShowCheckedModeBanner,
+            onGenerateTitle: child.onGenerateTitle,
+            theme: theme,
+            locale: localeState.locale,
+            supportedLocales: AppLocalizations.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            builder: child.builder,
+            initialRoute: child.initialRoute,
+            onGenerateRoute: child.onGenerateRoute,
+          );
+        },
+      ),
     );
   }
 }

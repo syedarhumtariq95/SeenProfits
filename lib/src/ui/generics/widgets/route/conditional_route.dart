@@ -24,8 +24,10 @@ class ConditionalRouteWidget extends StatelessWidget {
     this.routesExcluded,
     required this.builder,
     required this.child,
-  }) : assert(routes == null || routesExcluded == null,
-            'Cannot include `routes` and `routesExcluded`. Please provide an list of routes to include or exclude, not both.');
+  }) : assert(
+         routes == null || routesExcluded == null,
+         'Cannot include `routes` and `routesExcluded`. Please provide an list of routes to include or exclude, not both.',
+       );
 
   /// A list of route names where the `builder` should be applied.
   final List<String>? routes;

@@ -9,7 +9,7 @@ class CustomImagesPath {
   final String folderOnboarding = 'onboarding';
 
   ///IconNames
-  final String logo = 'logo.png';
+  final String logo = 'seen_profits_mark.svg';
   final String onboarding = 'onboarding.png';
 
   ///Getters for custom images

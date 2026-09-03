@@ -5,11 +5,11 @@ class ThemeColors {
   ThemeColors._();
 
   // Light Theme Colors
-  static const Color kThemeColor = Color(0xFFFF6D00);
-  static const Color kThemePrimaryColor = Color(0xffffb500);
-  static const Color kThemePrimaryLightColor = Color(0x69ffb400);
+  static const Color kThemeColor = Color(0xFF00796B);
+  static const Color kThemePrimaryColor = Color(0xFF009688);
+  static const Color kThemePrimaryLightColor = Color(0x66009688);
   static const Gradient kThemeGradientColor = LinearGradient(
-    colors: [ThemeColors.kThemePrimaryColor, Colors.orange],
+    colors: [ThemeColors.kThemePrimaryColor, Color(0xFF13A88D)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
@@ -36,6 +36,7 @@ class ThemeColors {
   static const Color kLightRedColor = Color(0xFFFF5353);
   static const Color kLightGreenColor = Color(0xFF3CA165);
   static const Color kDarkGreenColor = Color(0xFF026832);
+  static const Color kBrandGoldColor = Color(0xFFF4B740);
   static const Color kLightOrangeColor = Color(0xFFFFD883);
   static const Color kDarkOrangeColor = Color(0xFF683F02);
 

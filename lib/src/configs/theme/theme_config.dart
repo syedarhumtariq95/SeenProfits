@@ -61,6 +61,15 @@ class AppThemeConfig {
       disabledColor: ThemeColors.kButtonSecondaryColor,
     ),
 
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: ThemeColors.kThemeColor,
+        foregroundColor: ThemeColors.kButtonTextColor,
+        minimumSize: const Size.fromHeight(52),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      ),
+    ),
+
     /// Page transitions theme for the light theme.
     pageTransitionsTheme: const PageTransitionsTheme(
       builders: {TargetPlatform.iOS: ZoomPageTransitionsBuilder()},
@@ -110,6 +119,13 @@ class AppThemeConfig {
     buttonTheme: const ButtonThemeData(
       buttonColor: ThemeColors.kButtonDarkBlueColor,
       disabledColor: ThemeColors.kFontTabBarUnselectedColor,
+    ),
+
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        minimumSize: const Size.fromHeight(52),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      ),
     ),
 
     /// Page transitions theme for the dark theme.

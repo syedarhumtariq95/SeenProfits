@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../dependency_injection/dependency_injection.dart';
+import '../localization/locale_bloc/locale_bloc.dart';
 import '../theme/themes/themes_model/theme_bloc/theme_bloc.dart';
 
 /// A widget that initializes and provides multiple BLoCs to its descendants.
@@ -22,7 +23,14 @@ class BlocInitializer extends StatelessWidget {
     // Use MultiBlocProvider to provide multiple BLoCs to the widget tree.
     return MultiBlocProvider(
       // Define the list of BlocProviders.
-      providers: [BlocProvider(create: (context) => DI.i<ThemeBloc>())],
+      providers: [
+        BlocProvider(
+          create: (context) => DI.i<ThemeBloc>()..add(CheckedSavedTheme()),
+        ),
+        BlocProvider(
+          create: (context) => DI.i<LocaleBloc>()..add(LoadLocale()),
+        ),
+      ],
       // The child widget that will have access to the BLoCs.
       child: child,
     );

@@ -1,4 +1,6 @@
 import 'package:get_it/get_it.dart';
+
+import '../localization/locale_bloc/locale_bloc.dart';
 import '../theme/themes/themes_model/theme_bloc/theme_bloc.dart';
 import 'navigation_service.dart';
 
@@ -19,5 +21,7 @@ class DI {
     i.registerLazySingleton(() => NavigationService());
     // Register the ThemeBloc as a lazy singleton.
     i.registerLazySingleton(() => ThemeBloc());
+    // Register the locale BLoC used for English/Urdu app direction and text.
+    i.registerLazySingleton(() => LocaleBloc());
   }
 }

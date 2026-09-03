@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-
 class CustomText extends StatelessWidget {
-  const CustomText(this.text,
-      {super.key,
-        this.style,
-        this.textAlign,
-        this.overflow,
-        this.maxLines,
-        this.forceStrutHeight = false,
-        this.needsTranslation = true,
-        this.softWrap});
+  const CustomText(
+    this.text, {
+    super.key,
+    this.style,
+    this.textAlign,
+    this.overflow,
+    this.maxLines,
+    this.forceStrutHeight = false,
+    this.needsTranslation = true,
+    this.softWrap,
+  });
 
   final String text;
   final TextStyle? style;
