@@ -20,8 +20,8 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
       // Retrieve the currently saved theme flavor from local storage.
       final Data? currentThemeFlavorName =
           await LocalStorageSqfLite.getDataByKey(
-            AppThemeConfig().themeStorageKey,
-          );
+        AppThemeConfig().themeStorageKey,
+      );
       // Check if a theme flavor was found in local storage.
       if (currentThemeFlavorName != null) {
         // Get the ThemeFlavor enum value by name.

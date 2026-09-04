@@ -15,58 +15,118 @@ class AppThemeConfig {
   // Light Theme
   /// The light theme data for the application.
   final ThemeData _theme = ThemeData(
-    textTheme: FontTheme().textTheme,
+    textTheme: FontTheme().textTheme.apply(
+          bodyColor: ThemeColors.seenProfitsText,
+          displayColor: ThemeColors.seenProfitsText,
+        ),
 
     /// Card color in the light theme.
-    cardColor: ThemeColors.kBoxColor,
+    cardColor: ThemeColors.seenProfitsSurface,
 
     /// Primary color in the light theme.
-    primaryColor: ThemeColors.kThemeColor,
+    primaryColor: ThemeColors.seenProfitsPurple,
 
     /// Shadow color in the light theme.
-    shadowColor: ThemeColors.kCardShadowColor,
+    shadowColor: Colors.black,
 
     /// Color scheme for the light theme.
-    colorScheme: const ColorScheme.light().copyWith(
-      primary: ThemeColors.kThemeColor,
+    colorScheme: const ColorScheme.dark().copyWith(
+      primary: ThemeColors.seenProfitsPurple,
+      secondary: ThemeColors.seenProfitsPink,
+      surface: ThemeColors.seenProfitsSurface,
+      onSurface: ThemeColors.seenProfitsText,
+      onSurfaceVariant: ThemeColors.seenProfitsMutedText,
+      outline: ThemeColors.seenProfitsOutline,
+      outlineVariant: ThemeColors.seenProfitsOutline,
     ),
 
     /// Progress indicator theme for the light theme.
     progressIndicatorTheme: const ProgressIndicatorThemeData(
-      color: ThemeColors.kThemeColor,
+      color: ThemeColors.seenProfitsPurple,
     ),
 
     /// Scaffold background color in the light theme.
-    scaffoldBackgroundColor: ThemeColors.kScaffoldBackgroundColor,
+    scaffoldBackgroundColor: ThemeColors.seenProfitsDark,
 
     /// Font family for the light theme.
     fontFamily: FontsConfigs.poppinsFonts,
 
     /// App bar theme for the light theme.
     appBarTheme: const AppBarTheme(
-      backgroundColor: ThemeColors.kAppBarColor,
-      iconTheme: IconThemeData(color: ThemeColors.kIconColor),
+      backgroundColor: ThemeColors.seenProfitsDark,
+      foregroundColor: ThemeColors.seenProfitsText,
+      iconTheme: IconThemeData(color: ThemeColors.seenProfitsText),
     ),
 
     /// Bottom navigation bar theme for the light theme.
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: ThemeColors.kBottomNavigationBarBackgroundColor,
-      selectedItemColor: ThemeColors.kBottomNavigationBarTextSelectedColor,
-      unselectedItemColor: ThemeColors.kBottomNavigationBarTextUnselectedColor,
+      backgroundColor: ThemeColors.seenProfitsSurface,
+      selectedItemColor: ThemeColors.seenProfitsPink,
+      unselectedItemColor: ThemeColors.seenProfitsMutedText,
     ),
 
     /// Button theme for the light theme.
     buttonTheme: const ButtonThemeData(
-      buttonColor: ThemeColors.kButtonColor,
-      disabledColor: ThemeColors.kButtonSecondaryColor,
+      buttonColor: ThemeColors.seenProfitsPurple,
+      disabledColor: ThemeColors.seenProfitsSurfaceVariant,
     ),
 
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: ThemeColors.kThemeColor,
-        foregroundColor: ThemeColors.kButtonTextColor,
+        backgroundColor: ThemeColors.seenProfitsPurple,
+        foregroundColor: ThemeColors.seenProfitsText,
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      ),
+    ),
+
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: ThemeColors.seenProfitsPink,
+        minimumSize: const Size.fromHeight(52),
+        side: const BorderSide(color: ThemeColors.seenProfitsPurple),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      ),
+    ),
+
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(foregroundColor: ThemeColors.seenProfitsPink),
+    ),
+
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: ThemeColors.seenProfitsSurface,
+      labelStyle: const TextStyle(
+        color: ThemeColors.seenProfitsMutedText,
+        fontSize: 15,
+      ),
+      hintStyle: const TextStyle(
+        color: ThemeColors.seenProfitsMutedText,
+        fontSize: 15,
+      ),
+      prefixIconColor: ThemeColors.seenProfitsMutedText,
+      suffixIconColor: ThemeColors.seenProfitsMutedText,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: ThemeColors.seenProfitsOutline),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: ThemeColors.seenProfitsOutline),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide:
+            const BorderSide(color: ThemeColors.seenProfitsPink, width: 1.5),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: ThemeColors.kErrorRedColor),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide:
+            const BorderSide(color: ThemeColors.kErrorRedColor, width: 1.5),
       ),
     ),
 
@@ -79,24 +139,71 @@ class AppThemeConfig {
   // Dark Theme
   /// The dark theme data for the application.
   final ThemeData _darkTheme = ThemeData(
+    textTheme: FontTheme().textTheme.apply(
+          bodyColor: ThemeColors.seenProfitsText,
+          displayColor: ThemeColors.seenProfitsText,
+        ),
+
     /// Card color in the dark theme.
-    cardColor: ThemeColors.kDarkBoxColor,
+    cardColor: ThemeColors.seenProfitsSurface,
 
     /// Primary color in the dark theme.
-    primaryColor: ThemeColors.kThemePrimaryColor,
+    primaryColor: ThemeColors.seenProfitsPurple,
 
     /// Scaffold background color in the dark theme.
-    scaffoldBackgroundColor: ThemeColors.kDarkScaffoldBackgroundColor,
+    scaffoldBackgroundColor: ThemeColors.seenProfitsDark,
 
     /// Color scheme for the dark theme.
-    colorScheme: const ColorScheme.dark(),
+    colorScheme: const ColorScheme.dark().copyWith(
+      primary: ThemeColors.seenProfitsPurple,
+      secondary: ThemeColors.seenProfitsPink,
+      surface: ThemeColors.seenProfitsSurface,
+      onSurface: ThemeColors.seenProfitsText,
+      onSurfaceVariant: ThemeColors.seenProfitsMutedText,
+      outline: ThemeColors.seenProfitsOutline,
+      outlineVariant: ThemeColors.seenProfitsOutline,
+    ),
 
     /// Font family for the dark theme.
     fontFamily: FontsConfigs.poppinsFonts,
 
     /// Input decoration theme for the dark theme.
-    inputDecorationTheme: const InputDecorationTheme(
-      floatingLabelStyle: TextStyle(color: ThemeColors.kThemePrimaryColor),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: ThemeColors.seenProfitsSurface,
+      floatingLabelStyle: const TextStyle(color: ThemeColors.seenProfitsPink),
+      labelStyle: const TextStyle(
+        color: ThemeColors.seenProfitsMutedText,
+        fontSize: 15,
+      ),
+      hintStyle: const TextStyle(
+        color: ThemeColors.seenProfitsMutedText,
+        fontSize: 15,
+      ),
+      prefixIconColor: ThemeColors.seenProfitsMutedText,
+      suffixIconColor: ThemeColors.seenProfitsMutedText,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: ThemeColors.seenProfitsOutline),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: ThemeColors.seenProfitsOutline),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide:
+            const BorderSide(color: ThemeColors.seenProfitsPink, width: 1.5),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: ThemeColors.kErrorRedColor),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide:
+            const BorderSide(color: ThemeColors.kErrorRedColor, width: 1.5),
+      ),
     ),
 
     /// Shadow color in the dark theme.
@@ -104,21 +211,22 @@ class AppThemeConfig {
 
     /// App bar theme for the dark theme.
     appBarTheme: const AppBarTheme(
-      backgroundColor: ThemeColors.kDarkAppBarColor,
-      iconTheme: IconThemeData(color: ThemeColors.kButtonTextColor),
+      backgroundColor: ThemeColors.seenProfitsDark,
+      foregroundColor: ThemeColors.seenProfitsText,
+      iconTheme: IconThemeData(color: ThemeColors.seenProfitsText),
     ),
 
     /// Bottom navigation bar theme for the dark theme.
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: ThemeColors.kButtonDarkBlueColor,
-      selectedItemColor: ThemeColors.kBottomNavigationBarTextSelectedColor,
-      unselectedItemColor: ThemeColors.kFontHintColor,
+      backgroundColor: ThemeColors.seenProfitsSurface,
+      selectedItemColor: ThemeColors.seenProfitsPink,
+      unselectedItemColor: ThemeColors.seenProfitsMutedText,
     ),
 
     /// Button theme for the dark theme.
     buttonTheme: const ButtonThemeData(
-      buttonColor: ThemeColors.kButtonDarkBlueColor,
-      disabledColor: ThemeColors.kFontTabBarUnselectedColor,
+      buttonColor: ThemeColors.seenProfitsPurple,
+      disabledColor: ThemeColors.seenProfitsSurfaceVariant,
     ),
 
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -126,6 +234,19 @@ class AppThemeConfig {
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
+    ),
+
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: ThemeColors.seenProfitsPink,
+        minimumSize: const Size.fromHeight(52),
+        side: const BorderSide(color: ThemeColors.seenProfitsPurple),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      ),
+    ),
+
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(foregroundColor: ThemeColors.seenProfitsPink),
     ),
 
     /// Page transitions theme for the dark theme.

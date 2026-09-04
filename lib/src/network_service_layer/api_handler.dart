@@ -16,7 +16,7 @@ class APIService {
   final Dio _dio;
 
   APIService({required this.baseUrl})
-    : _dio = Dio(BaseOptions(baseUrl: baseUrl));
+      : _dio = Dio(BaseOptions(baseUrl: baseUrl));
 
   Future<APIResponseGeneric> apiCall({
     required String urlExt,

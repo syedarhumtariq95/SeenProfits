@@ -24,8 +24,8 @@ class RoleSelectionScreen extends StatelessWidget {
             icon: const Icon(Icons.language_outlined),
             onSelected: (languageCode) {
               context.read<LocaleBloc>().add(
-                ChangeLocale(Locale(languageCode)),
-              );
+                    ChangeLocale(Locale(languageCode)),
+                  );
             },
             itemBuilder: (context) => [
               PopupMenuItem(value: 'en', child: Text(localizations.english)),
@@ -38,9 +38,8 @@ class RoleSelectionScreen extends StatelessWidget {
         top: false,
         child: LayoutBuilder(
           builder: (context, constraints) {
-            final logoSize = (constraints.maxWidth * 0.2)
-                .clamp(72.0, 104.0)
-                .toDouble();
+            final logoSize =
+                (constraints.maxWidth * 0.2).clamp(72.0, 104.0).toDouble();
             return Center(
               child: ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 600),
@@ -73,7 +72,7 @@ class RoleSelectionScreen extends StatelessWidget {
                         description: localizations.businessRoleDescription,
                         onTap: () => Navigator.of(
                           context,
-                        ).pushNamed(CustomRouter.businessAuthRouteName),
+                        ).pushNamed(CustomRouter.businessHomeRouteName),
                       ),
                       const SizedBox(height: 16),
                       _RoleCard(
@@ -82,7 +81,7 @@ class RoleSelectionScreen extends StatelessWidget {
                         description: localizations.investorRoleDescription,
                         onTap: () => Navigator.of(
                           context,
-                        ).pushNamed(CustomRouter.investorAuthRouteName),
+                        ).pushNamed(CustomRouter.investorHomeRouteName),
                       ),
                     ],
                   ),

@@ -4,6 +4,21 @@ import 'package:flutter/material.dart';
 class ThemeColors {
   ThemeColors._();
 
+  // Seen Profits brand palette.
+  static const Color seenProfitsPurple = Color(0xFF6A1BFF);
+  static const Color seenProfitsPink = Color(0xFFFF3D71);
+  static const Color seenProfitsDark = Color(0xFF111111);
+  static const Color seenProfitsSurface = Color(0xFF1B1B22);
+  static const Color seenProfitsSurfaceVariant = Color(0xFF282631);
+  static const Color seenProfitsText = Color(0xFFFFFFFF);
+  static const Color seenProfitsMutedText = Color(0xFFC9C4D0);
+  static const Color seenProfitsOutline = Color(0xFF4B4657);
+  static const Gradient seenProfitsGradient = LinearGradient(
+    colors: [seenProfitsPurple, seenProfitsPink],
+    begin: AlignmentDirectional.centerStart,
+    end: AlignmentDirectional.centerEnd,
+  );
+
   // Light Theme Colors
   static const Color kThemeColor = Color(0xFF00796B);
   static const Color kThemePrimaryColor = Color(0xFF009688);

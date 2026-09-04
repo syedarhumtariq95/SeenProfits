@@ -67,9 +67,8 @@ class CustomSnackBar {
       ),
       duration: const Duration(milliseconds: 3000),
       behavior: SnackBarBehavior.floating,
-      backgroundColor: isError
-          ? ScreenConfig.theme.colorScheme.error
-          : Colors.black,
+      backgroundColor:
+          isError ? ScreenConfig.theme.colorScheme.error : Colors.black,
     );
   }
 }

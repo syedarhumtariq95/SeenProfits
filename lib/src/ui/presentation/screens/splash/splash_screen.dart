@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
       if (mounted) {
         Navigator.of(
           context,
-        ).pushReplacementNamed(CustomRouter.roleSelectionRouteName);
+        ).pushReplacementNamed(CustomRouter.authenticationEntryRouteName);
       }
     });
   }
@@ -54,17 +54,17 @@ class _SplashScreenState extends State<SplashScreen> {
                   localizations.appName,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                    color: Theme.of(context).colorScheme.primary,
-                    fontWeight: FontWeight.w700,
-                  ),
+                        color: Theme.of(context).colorScheme.primary,
+                        fontWeight: FontWeight.w700,
+                      ),
                 ),
                 const SizedBox(height: 10),
                 Text(
                   localizations.splashTagline,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.onSurfaceVariant,
-                  ),
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
                 ),
               ],
             ),
