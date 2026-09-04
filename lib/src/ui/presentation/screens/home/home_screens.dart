@@ -13,7 +13,7 @@ class BusinessHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: const AppLogo(size: 42)),
+      appBar: AppBar(title: const AppLogo(size: 44)),
       body: SafeArea(
           child: ListView(padding: const EdgeInsets.all(20), children: [
         Text(l10n.welcomeBusiness,
