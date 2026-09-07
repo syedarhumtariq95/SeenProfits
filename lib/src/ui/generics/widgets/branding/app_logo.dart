@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({super.key, required this.size});
@@ -10,10 +9,14 @@ class AppLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Semantics(
       image: true,
-      child: SvgPicture.asset(
-        'assets/logo/seen_profits_mark.svg',
-        width: size,
+      child: Image.asset(
+        'assets/images/logo/seen_profit_logo.png',
+        // The source logo is intentionally wide; give it enough horizontal
+        // space so its full branding reads clearly while BoxFit.contain
+        // preserves the original aspect ratio.
+        width: size * 2.8,
         height: size,
+        fit: BoxFit.contain,
       ),
     );
   }

@@ -70,18 +70,22 @@ class RoleSelectionScreen extends StatelessWidget {
                         title: localizations.business,
                         subtitle: localizations.dukandar,
                         description: localizations.businessRoleDescription,
-                        onTap: () => Navigator.of(
-                          context,
-                        ).pushNamed(CustomRouter.businessHomeRouteName),
+                        onTap: () =>
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                          CustomRouter.businessHomeRouteName,
+                          (route) => false,
+                        ),
                       ),
                       const SizedBox(height: 16),
                       _RoleCard(
                         icon: Icons.trending_up_rounded,
                         title: localizations.investor,
                         description: localizations.investorRoleDescription,
-                        onTap: () => Navigator.of(
-                          context,
-                        ).pushNamed(CustomRouter.investorHomeRouteName),
+                        onTap: () =>
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                          CustomRouter.investorHomeRouteName,
+                          (route) => false,
+                        ),
                       ),
                     ],
                   ),

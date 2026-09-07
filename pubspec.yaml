@@ -47,6 +47,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/images/logo/seen_profit_logo.png
     - assets/icons/
     - assets/images/onboarding/
     - assets/logo/

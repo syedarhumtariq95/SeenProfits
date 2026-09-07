@@ -49,16 +49,15 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 AppLogo(size: logoSize),
-                const SizedBox(height: 24),
-                Text(
-                  localizations.appName,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                        color: Theme.of(context).colorScheme.primary,
-                        fontWeight: FontWeight.w700,
-                      ),
-                ),
-                const SizedBox(height: 10),
+
+                // Text(
+                //   localizations.appName,
+                //   textAlign: TextAlign.center,
+                //   style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                //         color: Theme.of(context).colorScheme.primary,
+                //         fontWeight: FontWeight.w700,
+                //       ),
+                // ),
                 Text(
                   localizations.splashTagline,
                   textAlign: TextAlign.center,

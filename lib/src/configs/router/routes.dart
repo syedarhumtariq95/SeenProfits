@@ -6,6 +6,7 @@ import '../../ui/presentation/screens/onboarding/role_selection_screen.dart';
 import '../../ui/presentation/screens/splash/splash_screen.dart';
 import '../../ui/presentation/screens/home/home_screens.dart';
 import '../../ui/presentation/screens/home/portal_screens.dart';
+import '../../ui/presentation/screens/home/investor_screens.dart';
 
 /// A class for managing the application's routes.
 ///
@@ -42,6 +43,9 @@ class CustomRouter {
   static const String notificationsRouteName = '/notifications';
   static const String favoritesRouteName = '/favorites';
   static const String profileSettingsRouteName = '/profile-settings';
+  static const String businessRequestsRouteName = '/business/requests';
+  static const String businessChatsRouteName = '/business/chats';
+  static const String businessProfileRouteName = '/business/profile';
   static const String investorAuthRouteName = '/investor/auth';
   static const String investorLoginRouteName = '/investor/login';
   static const String investorRegisterRouteName = '/investor/register';
@@ -51,6 +55,10 @@ class CustomRouter {
   static const String investorResetPasswordRouteName =
       '/investor/reset-password';
   static const String investorHomeRouteName = '/investor/home';
+  static const String investorRequestsRouteName = '/investor/requests';
+  static const String investorFiltersRouteName = '/investor/filters';
+  static const String ratingsRouteName = '/ratings-reviews';
+  static const String settingsRouteName = '/settings';
 
   /// A map of route names to their corresponding widget builders.
   ///
@@ -100,14 +108,23 @@ class CustomRouter {
             page: AuthenticationPage.resetPassword),
     businessHomeRouteName: (BuildContext context) => const BusinessHomeScreen(),
     businessDetailsRouteName: (BuildContext context) =>
-        const BusinessDetailsScreen(),
+        const InvestorBusinessDetail(),
     chatRouteName: (BuildContext context) => const ChatScreen(),
     addBusinessRouteName: (BuildContext context) => const AddBusinessScreen(),
     verificationRouteName: (BuildContext context) => const VerificationScreen(),
-    seekInvestmentRouteName: (BuildContext context) => const SeekInvestmentScreen(),
-    notificationsRouteName: (BuildContext context) => const NotificationsScreen(),
+    seekInvestmentRouteName: (BuildContext context) =>
+        const SeekInvestmentScreen(),
+    notificationsRouteName: (BuildContext context) =>
+        const NotificationsScreen(),
     favoritesRouteName: (BuildContext context) => const FavoritesScreen(),
-    profileSettingsRouteName: (BuildContext context) => const ProfileSettingsScreen(),
+    profileSettingsRouteName: (BuildContext context) =>
+        const InvestorProfileScreen(),
+    businessRequestsRouteName: (BuildContext context) =>
+        const BusinessRequestsScreen(),
+    businessChatsRouteName: (BuildContext context) =>
+        const BusinessChatListScreen(),
+    businessProfileRouteName: (BuildContext context) =>
+        const BusinessProfileSettingsScreen(),
     investorAuthRouteName: (BuildContext context) =>
         const AuthEntryScreen(role: SeenProfitsRole.investor),
     investorLoginRouteName: (BuildContext context) =>
@@ -130,6 +147,11 @@ class CustomRouter {
         const AuthenticationScreen(
             role: SeenProfitsRole.investor,
             page: AuthenticationPage.resetPassword),
-    investorHomeRouteName: (BuildContext context) => const InvestorHomeScreen(),
+    investorHomeRouteName: (BuildContext context) =>
+        const InvestorPortalScreen(),
+    investorRequestsRouteName: (BuildContext context) =>
+        const InvestorRequestsScreen(),
+    ratingsRouteName: (BuildContext context) => const RatingsReviewsScreen(),
+    settingsRouteName: (BuildContext context) => const SettingsScreen(business: false),
   };
 }

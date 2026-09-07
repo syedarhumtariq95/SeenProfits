@@ -57,6 +57,8 @@ class App extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 onGenerateTitle: (context) =>
                     AppLocalizations.of(context)!.appName,
+                localizationsDelegates: AppLocalizations.localizationsDelegates,
+                supportedLocales: AppLocalizations.supportedLocales,
                 // Set the app's theme based on the current theme flavor.
                 theme: appThemeConfig.getThemeData(
                   ThemeBlocHelper.getCurrentThemeFlavor(context),
