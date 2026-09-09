@@ -7,6 +7,8 @@ import '../../ui/presentation/screens/splash/splash_screen.dart';
 import '../../ui/presentation/screens/home/home_screens.dart';
 import '../../ui/presentation/screens/home/portal_screens.dart';
 import '../../ui/presentation/screens/home/investor_screens.dart';
+import '../../ui/presentation/screens/investor/business_detail/investor_business_detail_screen.dart';
+import '../../ui/presentation/screens/investor/home/investor_home_screen.dart' hide InvestorHomeScreen;
 
 /// A class for managing the application's routes.
 ///
@@ -108,7 +110,7 @@ class CustomRouter {
             page: AuthenticationPage.resetPassword),
     businessHomeRouteName: (BuildContext context) => const BusinessHomeScreen(),
     businessDetailsRouteName: (BuildContext context) =>
-        const InvestorBusinessDetail(),
+        const InvestorBusinessDetailScreen(),
     chatRouteName: (BuildContext context) => const ChatScreen(),
     addBusinessRouteName: (BuildContext context) => const AddBusinessScreen(),
     verificationRouteName: (BuildContext context) => const VerificationScreen(),
@@ -147,11 +149,11 @@ class CustomRouter {
         const AuthenticationScreen(
             role: SeenProfitsRole.investor,
             page: AuthenticationPage.resetPassword),
-    investorHomeRouteName: (BuildContext context) =>
-        const InvestorPortalScreen(),
+    investorHomeRouteName: (BuildContext context) => const InvestorHomeScreen(),
     investorRequestsRouteName: (BuildContext context) =>
         const InvestorRequestsScreen(),
     ratingsRouteName: (BuildContext context) => const RatingsReviewsScreen(),
-    settingsRouteName: (BuildContext context) => const SettingsScreen(business: false),
+    settingsRouteName: (BuildContext context) =>
+        const SettingsScreen(business: false),
   };
 }
