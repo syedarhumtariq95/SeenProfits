@@ -5,10 +5,18 @@ import '../../ui/presentation/screens/auth/authentication_screens.dart';
 import '../../ui/presentation/screens/onboarding/role_selection_screen.dart';
 import '../../ui/presentation/screens/splash/splash_screen.dart';
 import '../../ui/presentation/screens/home/home_screens.dart';
-import '../../ui/presentation/screens/home/portal_screens.dart';
+import '../../ui/presentation/screens/business/add_business/add_business_screen.dart';
+import '../../ui/presentation/screens/business/chats/business_chat_list_screen.dart';
+import '../../ui/presentation/screens/business/opportunity/seek_investment_screen.dart';
+import '../../ui/presentation/screens/business/profile/business_profile_settings_screen.dart';
+import '../../ui/presentation/screens/business/requests/business_requests_screen.dart';
+import '../../ui/presentation/screens/business/verification/verification_screen.dart';
+import '../../ui/presentation/screens/investor/favorites/favorites_screen.dart';
+import '../../ui/presentation/screens/notifications/notifications_screen.dart';
 import '../../ui/presentation/screens/home/investor_screens.dart';
 import '../../ui/presentation/screens/investor/business_detail/investor_business_detail_screen.dart';
-import '../../ui/presentation/screens/investor/home/investor_home_screen.dart' hide InvestorHomeScreen;
+import '../../ui/presentation/screens/investor/home/investor_home_screen.dart'
+    hide InvestorHomeScreen;
 
 /// A class for managing the application's routes.
 ///
