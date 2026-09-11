@@ -1,0 +1,10 @@
+{
+  "name": "Seen Profits Admin",
+  "short_name": "Seen Profits Admin",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#6A1BFF",
+  "description": "Seen Profits administration portal"
+}
+
