@@ -291,4 +291,170 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get loginSuccessful => 'Login successful';
+
+  @override
+  String get searchBusinesses => 'Search businesses';
+
+  @override
+  String get businessStatus => 'Status';
+
+  @override
+  String get allStatuses => 'All statuses';
+
+  @override
+  String get active => 'Active';
+
+  @override
+  String get suspended => 'Suspended';
+
+  @override
+  String get pending => 'Pending';
+
+  @override
+  String get businessName => 'Business name';
+
+  @override
+  String get owner => 'Owner';
+
+  @override
+  String get category => 'Category';
+
+  @override
+  String get actions => 'Actions';
+
+  @override
+  String get viewBusiness => 'View business';
+
+  @override
+  String get editBusiness => 'Edit business';
+
+  @override
+  String get noBusinessesFound => 'No businesses match your filters.';
+
+  @override
+  String businessActionSelected(String action, String business) {
+    return '$action selected for $business';
+  }
+
+  @override
+  String get businessRecordAlpha => 'Alpha Foods';
+
+  @override
+  String get businessRecordVertex => 'Vertex Solutions';
+
+  @override
+  String get businessRecordGreenfield => 'Greenfield Farms';
+
+  @override
+  String get businessRecordAtlas => 'Atlas Textiles';
+
+  @override
+  String get businessOwnerAyesha => 'Ayesha Khan';
+
+  @override
+  String get businessOwnerBilal => 'Bilal Ahmed';
+
+  @override
+  String get businessOwnerFatima => 'Fatima Noor';
+
+  @override
+  String get businessOwnerHamza => 'Hamza Ali';
+
+  @override
+  String get foodAndBeverage => 'Food & Beverage';
+
+  @override
+  String get technology => 'Technology';
+
+  @override
+  String get agriculture => 'Agriculture';
+
+  @override
+  String get manufacturing => 'Manufacturing';
+
+  @override
+  String get businessDetails => 'Business details';
+
+  @override
+  String get close => 'Close';
+
+  @override
+  String get assignedPlan => 'Assigned tier / plan';
+
+  @override
+  String get starterPlan => 'Starter';
+
+  @override
+  String get growthPlan => 'Growth';
+
+  @override
+  String get enterprisePlan => 'Enterprise';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get businessUpdated => 'Business details updated.';
+
+  @override
+  String get businessUpdateFailed =>
+      'Unable to update business details. Please try again.';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get activeBusinesses => 'Active Businesses';
+
+  @override
+  String get pendingBusinesses => 'Pending Businesses';
+
+  @override
+  String get suspendedBusinesses => 'Suspended Businesses';
+
+  @override
+  String get totalRevenue => 'Total Revenue';
+
+  @override
+  String get monthlyGrowth => 'Monthly Growth';
+
+  @override
+  String get refreshDashboard => 'Refresh dashboard';
+
+  @override
+  String get dashboardLoadFailed =>
+      'Unable to load dashboard data. Please try again.';
+
+  @override
+  String businessApprovedActivity(String name) {
+    return 'Approved business: $name';
+  }
+
+  @override
+  String businessSubmittedActivity(String name) {
+    return 'New business submitted: $name';
+  }
+
+  @override
+  String businessSuspendedActivity(String name) {
+    return 'Suspended business: $name';
+  }
+
+  @override
+  String revenueReceivedActivity(String amount) {
+    return 'Revenue received: $amount';
+  }
+
+  @override
+  String minutesAgo(int minutes) {
+    return '${minutes}m ago';
+  }
+
+  @override
+  String hoursAgo(int hours) {
+    return '${hours}h ago';
+  }
+
+  @override
+  String get yesterday => 'Yesterday';
 }

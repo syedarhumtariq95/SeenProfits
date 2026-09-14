@@ -6,7 +6,9 @@ import '../../presentation/admin_shell/admin_shell.dart';
 import '../../presentation/features/auth/forgot_password/forgot_password_screen.dart';
 import '../../presentation/features/auth/login/admin_login_screen.dart';
 import '../../presentation/features/auth/two_factor/admin_two_factor_screen.dart';
-import '../../presentation/features/dashboard/dashboard_placeholder_screen.dart';
+import '../../presentation/features/business_management/business_management_screen.dart';
+import '../../presentation/features/dashboard/dashboard_screen.dart';
+import '../../presentation/features/verification/verification_screen.dart';
 import '../../presentation/features/shared/coming_soon_screen.dart';
 import 'admin_routes.dart';
 
@@ -29,7 +31,17 @@ class AdminRouter {
       case AdminRouteNames.dashboard:
         page = const AdminShell(
           routeName: AdminRouteNames.dashboard,
-          child: DashboardPlaceholderScreen(),
+          child: DashboardScreen(),
+        );
+      case AdminRouteNames.businesses:
+        page = const AdminShell(
+          routeName: AdminRouteNames.businesses,
+          child: BusinessManagementScreen(),
+        );
+      case AdminRouteNames.verification:
+        page = const AdminShell(
+          routeName: AdminRouteNames.verification,
+          child: VerificationScreen(),
         );
       default:
         page = AdminShell(

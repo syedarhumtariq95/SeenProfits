@@ -25,4 +25,3 @@ class DashboardQuickAction extends StatelessWidget {
     );
   }
 }
-

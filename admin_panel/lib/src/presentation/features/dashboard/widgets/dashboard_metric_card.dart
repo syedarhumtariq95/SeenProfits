@@ -31,4 +31,3 @@ class DashboardMetricCard extends StatelessWidget {
     );
   }
 }
-

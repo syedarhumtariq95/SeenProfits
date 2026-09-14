@@ -290,4 +290,171 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get loginSuccessful => 'لاگ اِن کامیاب ہے';
+
+  @override
+  String get searchBusinesses => 'کاروبار تلاش کریں';
+
+  @override
+  String get businessStatus => 'حیثیت';
+
+  @override
+  String get allStatuses => 'تمام حیثیتیں';
+
+  @override
+  String get active => 'فعال';
+
+  @override
+  String get suspended => 'معطل';
+
+  @override
+  String get pending => 'زیر التوا';
+
+  @override
+  String get businessName => 'کاروبار کا نام';
+
+  @override
+  String get owner => 'مالک';
+
+  @override
+  String get category => 'زمرہ';
+
+  @override
+  String get actions => 'اقدامات';
+
+  @override
+  String get viewBusiness => 'کاروبار دیکھیں';
+
+  @override
+  String get editBusiness => 'کاروبار میں ترمیم کریں';
+
+  @override
+  String get noBusinessesFound =>
+      'آپ کے فلٹرز سے کوئی کاروبار مطابقت نہیں رکھتا۔';
+
+  @override
+  String businessActionSelected(String action, String business) {
+    return '$business کے لیے $action منتخب کیا گیا';
+  }
+
+  @override
+  String get businessRecordAlpha => 'الفا فوڈز';
+
+  @override
+  String get businessRecordVertex => 'ورٹیکس سلوشنز';
+
+  @override
+  String get businessRecordGreenfield => 'گرین فیلڈ فارمز';
+
+  @override
+  String get businessRecordAtlas => 'اٹلس ٹیکسٹائلز';
+
+  @override
+  String get businessOwnerAyesha => 'عائشہ خان';
+
+  @override
+  String get businessOwnerBilal => 'بلال احمد';
+
+  @override
+  String get businessOwnerFatima => 'فاطمہ نور';
+
+  @override
+  String get businessOwnerHamza => 'حمزہ علی';
+
+  @override
+  String get foodAndBeverage => 'خوراک اور مشروبات';
+
+  @override
+  String get technology => 'ٹیکنالوجی';
+
+  @override
+  String get agriculture => 'زراعت';
+
+  @override
+  String get manufacturing => 'پیداوار';
+
+  @override
+  String get businessDetails => 'کاروبار کی تفصیلات';
+
+  @override
+  String get close => 'بند کریں';
+
+  @override
+  String get assignedPlan => 'مختص درجہ / پلان';
+
+  @override
+  String get starterPlan => 'اسٹارٹر';
+
+  @override
+  String get growthPlan => 'گروتھ';
+
+  @override
+  String get enterprisePlan => 'انٹرپرائز';
+
+  @override
+  String get saveChanges => 'تبدیلیاں محفوظ کریں';
+
+  @override
+  String get businessUpdated => 'کاروبار کی تفصیلات اپ ڈیٹ ہو گئیں۔';
+
+  @override
+  String get businessUpdateFailed =>
+      'کاروبار کی تفصیلات اپ ڈیٹ نہیں ہو سکیں۔ دوبارہ کوشش کریں۔';
+
+  @override
+  String get retry => 'دوبارہ کوشش کریں';
+
+  @override
+  String get activeBusinesses => 'Active Businesses';
+
+  @override
+  String get pendingBusinesses => 'Pending Businesses';
+
+  @override
+  String get suspendedBusinesses => 'Suspended Businesses';
+
+  @override
+  String get totalRevenue => 'Total Revenue';
+
+  @override
+  String get monthlyGrowth => 'Monthly Growth';
+
+  @override
+  String get refreshDashboard => 'Refresh dashboard';
+
+  @override
+  String get dashboardLoadFailed =>
+      'Unable to load dashboard data. Please try again.';
+
+  @override
+  String businessApprovedActivity(String name) {
+    return 'Approved business: $name';
+  }
+
+  @override
+  String businessSubmittedActivity(String name) {
+    return 'New business submitted: $name';
+  }
+
+  @override
+  String businessSuspendedActivity(String name) {
+    return 'Suspended business: $name';
+  }
+
+  @override
+  String revenueReceivedActivity(String amount) {
+    return 'Revenue received: $amount';
+  }
+
+  @override
+  String minutesAgo(int minutes) {
+    return '${minutes}m ago';
+  }
+
+  @override
+  String hoursAgo(int hours) {
+    return '${hours}h ago';
+  }
+
+  @override
+  String get yesterday => 'Yesterday';
 }

@@ -631,6 +631,306 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Login successful'**
   String get loginSuccessful;
+
+  /// No description provided for @searchBusinesses.
+  ///
+  /// In en, this message translates to:
+  /// **'Search businesses'**
+  String get searchBusinesses;
+
+  /// No description provided for @businessStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get businessStatus;
+
+  /// No description provided for @allStatuses.
+  ///
+  /// In en, this message translates to:
+  /// **'All statuses'**
+  String get allStatuses;
+
+  /// No description provided for @active.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get active;
+
+  /// No description provided for @suspended.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspended'**
+  String get suspended;
+
+  /// No description provided for @pending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get pending;
+
+  /// No description provided for @businessName.
+  ///
+  /// In en, this message translates to:
+  /// **'Business name'**
+  String get businessName;
+
+  /// No description provided for @owner.
+  ///
+  /// In en, this message translates to:
+  /// **'Owner'**
+  String get owner;
+
+  /// No description provided for @category.
+  ///
+  /// In en, this message translates to:
+  /// **'Category'**
+  String get category;
+
+  /// No description provided for @actions.
+  ///
+  /// In en, this message translates to:
+  /// **'Actions'**
+  String get actions;
+
+  /// No description provided for @viewBusiness.
+  ///
+  /// In en, this message translates to:
+  /// **'View business'**
+  String get viewBusiness;
+
+  /// No description provided for @editBusiness.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit business'**
+  String get editBusiness;
+
+  /// No description provided for @noBusinessesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No businesses match your filters.'**
+  String get noBusinessesFound;
+
+  /// No description provided for @businessActionSelected.
+  ///
+  /// In en, this message translates to:
+  /// **'{action} selected for {business}'**
+  String businessActionSelected(String action, String business);
+
+  /// No description provided for @businessRecordAlpha.
+  ///
+  /// In en, this message translates to:
+  /// **'Alpha Foods'**
+  String get businessRecordAlpha;
+
+  /// No description provided for @businessRecordVertex.
+  ///
+  /// In en, this message translates to:
+  /// **'Vertex Solutions'**
+  String get businessRecordVertex;
+
+  /// No description provided for @businessRecordGreenfield.
+  ///
+  /// In en, this message translates to:
+  /// **'Greenfield Farms'**
+  String get businessRecordGreenfield;
+
+  /// No description provided for @businessRecordAtlas.
+  ///
+  /// In en, this message translates to:
+  /// **'Atlas Textiles'**
+  String get businessRecordAtlas;
+
+  /// No description provided for @businessOwnerAyesha.
+  ///
+  /// In en, this message translates to:
+  /// **'Ayesha Khan'**
+  String get businessOwnerAyesha;
+
+  /// No description provided for @businessOwnerBilal.
+  ///
+  /// In en, this message translates to:
+  /// **'Bilal Ahmed'**
+  String get businessOwnerBilal;
+
+  /// No description provided for @businessOwnerFatima.
+  ///
+  /// In en, this message translates to:
+  /// **'Fatima Noor'**
+  String get businessOwnerFatima;
+
+  /// No description provided for @businessOwnerHamza.
+  ///
+  /// In en, this message translates to:
+  /// **'Hamza Ali'**
+  String get businessOwnerHamza;
+
+  /// No description provided for @foodAndBeverage.
+  ///
+  /// In en, this message translates to:
+  /// **'Food & Beverage'**
+  String get foodAndBeverage;
+
+  /// No description provided for @technology.
+  ///
+  /// In en, this message translates to:
+  /// **'Technology'**
+  String get technology;
+
+  /// No description provided for @agriculture.
+  ///
+  /// In en, this message translates to:
+  /// **'Agriculture'**
+  String get agriculture;
+
+  /// No description provided for @manufacturing.
+  ///
+  /// In en, this message translates to:
+  /// **'Manufacturing'**
+  String get manufacturing;
+
+  /// No description provided for @businessDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Business details'**
+  String get businessDetails;
+
+  /// No description provided for @close.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get close;
+
+  /// No description provided for @assignedPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Assigned tier / plan'**
+  String get assignedPlan;
+
+  /// No description provided for @starterPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Starter'**
+  String get starterPlan;
+
+  /// No description provided for @growthPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Growth'**
+  String get growthPlan;
+
+  /// No description provided for @enterprisePlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Enterprise'**
+  String get enterprisePlan;
+
+  /// No description provided for @saveChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Save changes'**
+  String get saveChanges;
+
+  /// No description provided for @businessUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Business details updated.'**
+  String get businessUpdated;
+
+  /// No description provided for @businessUpdateFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to update business details. Please try again.'**
+  String get businessUpdateFailed;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// No description provided for @activeBusinesses.
+  ///
+  /// In en, this message translates to:
+  /// **'Active Businesses'**
+  String get activeBusinesses;
+
+  /// No description provided for @pendingBusinesses.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending Businesses'**
+  String get pendingBusinesses;
+
+  /// No description provided for @suspendedBusinesses.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspended Businesses'**
+  String get suspendedBusinesses;
+
+  /// No description provided for @totalRevenue.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Revenue'**
+  String get totalRevenue;
+
+  /// No description provided for @monthlyGrowth.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly Growth'**
+  String get monthlyGrowth;
+
+  /// No description provided for @refreshDashboard.
+  ///
+  /// In en, this message translates to:
+  /// **'Refresh dashboard'**
+  String get refreshDashboard;
+
+  /// No description provided for @dashboardLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to load dashboard data. Please try again.'**
+  String get dashboardLoadFailed;
+
+  /// No description provided for @businessApprovedActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'Approved business: {name}'**
+  String businessApprovedActivity(String name);
+
+  /// No description provided for @businessSubmittedActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'New business submitted: {name}'**
+  String businessSubmittedActivity(String name);
+
+  /// No description provided for @businessSuspendedActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspended business: {name}'**
+  String businessSuspendedActivity(String name);
+
+  /// No description provided for @revenueReceivedActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'Revenue received: {amount}'**
+  String revenueReceivedActivity(String amount);
+
+  /// No description provided for @minutesAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'{minutes}m ago'**
+  String minutesAgo(int minutes);
+
+  /// No description provided for @hoursAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'{hours}h ago'**
+  String hoursAgo(int hours);
+
+  /// No description provided for @yesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get yesterday;
 }
 
 class _AppLocalizationsDelegate

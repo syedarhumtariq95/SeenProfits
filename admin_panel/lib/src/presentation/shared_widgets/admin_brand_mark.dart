@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../configs/localization/localization_extensions.dart';
-import '../../configs/theme/admin_theme_colors.dart';
 
 class AdminBrandMark extends StatelessWidget {
   const AdminBrandMark({super.key, this.compact = false});
@@ -13,14 +12,11 @@ class AdminBrandMark extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Container(
+        Image.asset(
+          'assets/images/logo/seen_profit_logo.png',
           width: 38,
           height: 38,
-          decoration: BoxDecoration(
-            gradient: AdminThemeColors.brandGradient,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: const Icon(Icons.trending_up_rounded, color: Colors.white),
+          fit: BoxFit.contain,
         ),
         if (!compact) ...[
           const SizedBox(width: 12),

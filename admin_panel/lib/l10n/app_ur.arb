@@ -90,4 +90,47 @@
   ,"mockLoginHint": "ترقیاتی فرضی لاگ اِن: admin@demo.local اور DemoAdmin123! استعمال کریں"
   ,"mockTwoFactorHint": "ترقیاتی فرضی کوڈ: 123456"
   ,"mockCodeResent": "فرضی تصدیقی کوڈ دوبارہ بھیج دیا گیا ہے۔ نیچے دکھایا گیا ترقیاتی کوڈ استعمال کریں۔"
+,
+  "searchBusinesses": "کاروبار تلاش کریں",
+  "businessStatus": "حیثیت",
+  "allStatuses": "تمام حیثیتیں",
+  "active": "فعال",
+  "suspended": "معطل",
+  "pending": "زیر التوا",
+  "businessName": "کاروبار کا نام",
+  "owner": "مالک",
+  "category": "زمرہ",
+  "actions": "اقدامات",
+  "viewBusiness": "کاروبار دیکھیں",
+  "editBusiness": "کاروبار میں ترمیم کریں",
+  "noBusinessesFound": "آپ کے فلٹرز سے کوئی کاروبار مطابقت نہیں رکھتا۔",
+  "businessActionSelected": "{business} کے لیے {action} منتخب کیا گیا",
+  "@businessActionSelected": {
+    "placeholders": {
+      "action": { "type": "String" },
+      "business": { "type": "String" }
+    }
+  },
+  "businessRecordAlpha": "الفا فوڈز",
+  "businessRecordVertex": "ورٹیکس سلوشنز",
+  "businessRecordGreenfield": "گرین فیلڈ فارمز",
+  "businessRecordAtlas": "اٹلس ٹیکسٹائلز",
+  "businessOwnerAyesha": "عائشہ خان",
+  "businessOwnerBilal": "بلال احمد",
+  "businessOwnerFatima": "فاطمہ نور",
+  "businessOwnerHamza": "حمزہ علی",
+  "foodAndBeverage": "خوراک اور مشروبات",
+  "technology": "ٹیکنالوجی",
+  "agriculture": "زراعت",
+  "manufacturing": "پیداوار",
+  "businessDetails": "کاروبار کی تفصیلات",
+  "close": "بند کریں",
+  "assignedPlan": "مختص درجہ / پلان",
+  "starterPlan": "اسٹارٹر",
+  "growthPlan": "گروتھ",
+  "enterprisePlan": "انٹرپرائز",
+  "saveChanges": "تبدیلیاں محفوظ کریں",
+  "businessUpdated": "کاروبار کی تفصیلات اپ ڈیٹ ہو گئیں۔",
+  "businessUpdateFailed": "کاروبار کی تفصیلات اپ ڈیٹ نہیں ہو سکیں۔ دوبارہ کوشش کریں۔",
+  "retry": "دوبارہ کوشش کریں"
 }
