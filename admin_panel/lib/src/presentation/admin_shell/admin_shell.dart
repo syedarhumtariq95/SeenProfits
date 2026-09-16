@@ -59,7 +59,10 @@ class _AdminShellState extends State<AdminShell> {
         );
         final content = Expanded(
           child: Column(
-            children: [topBar, Expanded(child: _AdminContent(child: widget.child))],
+            children: [
+              topBar,
+              Expanded(child: _AdminContent(child: widget.child))
+            ],
           ),
         );
         final isRtl = Directionality.of(context) == TextDirection.rtl;

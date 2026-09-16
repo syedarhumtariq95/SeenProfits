@@ -28,6 +28,7 @@ class VerificationState {
         loadStatus: loadStatus ?? this.loadStatus,
         actionStatus: actionStatus ?? this.actionStatus,
         requests: requests ?? this.requests,
-        processingId: clearProcessingId ? null : processingId ?? this.processingId,
+        processingId:
+            clearProcessingId ? null : processingId ?? this.processingId,
       );
 }

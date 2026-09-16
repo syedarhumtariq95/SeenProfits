@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../configs/dependency_injection/dependency_injection.dart';
 import '../../configs/localization/localization_extensions.dart';
@@ -26,21 +27,29 @@ class AdminSidebar extends StatelessWidget {
         .where((item) => session.can(item.permission))
         .toList(growable: false);
 
-    final sidebar = ColoredBox(
-      color: AdminThemeColors.sidebar,
+    final sidebar = DecoratedBox(
+      decoration: const BoxDecoration(
+        color: AdminThemeColors.sidebar,
+        border: BorderDirectional(
+          end: BorderSide(color: AdminThemeColors.outline),
+        ),
+      ),
       child: SizedBox(
         width: collapsed ? 84 : 272,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(20, 24, 20, 20),
-              child: AdminBrandMark(compact: collapsed),
+            SizedBox(
+              height: 72,
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(20, 16, 20, 16),
+                child: AdminBrandMark(compact: collapsed),
+              ),
             ),
             const Divider(height: 1),
             Expanded(
               child: ListView(
                 padding:
-                const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                    const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
                 children: [
                   for (final item in navigationItems)
                     _NavigationTile(
@@ -106,31 +115,100 @@ class _NavigationTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
 
-    final tile = ListTile(
+    return _NavigationTileContent(
+      item: item,
       selected: selected,
-      selectedTileColor: colorScheme.primary.withOpacity(0.18),
-      selectedColor: colorScheme.onSurface,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      leading: Icon(item.icon),
-      title: collapsed ? null : Text(item.label(context)),
-      onTap: () {
-        if (isDrawer) {
-          Navigator.of(context).pop();
-        }
-        if (!selected) {
-          Navigator.of(context).pushReplacementNamed(item.route);
-        }
-      },
+      isDrawer: isDrawer,
+      collapsed: collapsed,
+      colorScheme: colorScheme,
     );
+  }
+}
 
+class _NavigationTileContent extends StatefulWidget {
+  const _NavigationTileContent({
+    required this.item,
+    required this.selected,
+    required this.isDrawer,
+    required this.collapsed,
+    required this.colorScheme,
+  });
+
+  final AdminNavigationItem item;
+  final bool selected;
+  final bool isDrawer;
+  final bool collapsed;
+  final ColorScheme colorScheme;
+
+  @override
+  State<_NavigationTileContent> createState() => _NavigationTileContentState();
+}
+
+class _NavigationTileContentState extends State<_NavigationTileContent> {
+  var _hovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final active = widget.selected;
+    final foreground = active
+        ? widget.colorScheme.primary
+        : widget.colorScheme.onSurface.withOpacity(.78);
+    final tile = MouseRegion(
+      onEnter: (_) => setState(() => _hovered = true),
+      onExit: (_) => setState(() => _hovered = false),
+      child: InkWell(
+        onTap: () {
+          if (widget.isDrawer) {
+            context.pop();
+          }
+          if (!active) {
+            context.go(widget.item.route);
+          }
+        },
+        borderRadius: BorderRadius.circular(10),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 140),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
+          decoration: BoxDecoration(
+            color: active
+                ? AdminThemeColors.activeBackground
+                : _hovered
+                    ? widget.colorScheme.primary.withOpacity(.08)
+                    : Colors.transparent,
+            borderRadius: BorderRadius.circular(10),
+            border: BorderDirectional(
+              start: BorderSide(
+                color: active ? widget.colorScheme.primary : Colors.transparent,
+                width: 3,
+              ),
+            ),
+          ),
+          child: Row(
+            children: [
+              Icon(widget.item.icon, color: foreground),
+              if (!widget.collapsed) ...[
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    widget.item.label(context),
+                    style: TextStyle(
+                      color: foreground,
+                      fontWeight: active ? FontWeight.w700 : FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+    final content = widget.collapsed
+        ? Tooltip(message: widget.item.label(context), child: tile)
+        : tile;
     return Padding(
       padding: const EdgeInsets.only(bottom: 4),
-      child: collapsed
-          ? Tooltip(
-        message: item.label(context),
-        child: tile,
-      )
-          : tile,
+      child: content,
     );
   }
 }

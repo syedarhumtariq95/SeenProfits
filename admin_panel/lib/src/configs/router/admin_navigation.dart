@@ -56,6 +56,12 @@ final List<AdminNavigationItem> adminNavigationItems = [
     permission: AdminPermission.monitorInvestmentRequests,
   ),
   AdminNavigationItem(
+    route: AdminRouteNames.profitDistribution,
+    icon: Icons.payments_outlined,
+    label: (context) => context.l10n.profitDistribution,
+    permission: AdminPermission.monitorInvestmentRequests,
+  ),
+  AdminNavigationItem(
     route: AdminRouteNames.reports,
     icon: Icons.flag_outlined,
     label: (context) => context.l10n.reportsAndComplaints,

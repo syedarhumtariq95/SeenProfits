@@ -116,6 +116,72 @@ abstract class AppLocalizations {
   /// **'Verification Queue'**
   String get verificationQueue;
 
+  /// No description provided for @noPendingVerifications.
+  ///
+  /// In en, this message translates to:
+  /// **'No pending verification requests.'**
+  String get noPendingVerifications;
+
+  /// No description provided for @cnicLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'CNIC'**
+  String get cnicLabel;
+
+  /// No description provided for @documentsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Documents'**
+  String get documentsLabel;
+
+  /// No description provided for @approve.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve'**
+  String get approve;
+
+  /// No description provided for @reject.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get reject;
+
+  /// No description provided for @approveBusinessTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve business?'**
+  String get approveBusinessTitle;
+
+  /// No description provided for @approveBusinessMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve {business} for verification?'**
+  String approveBusinessMessage(String business);
+
+  /// No description provided for @rejectBusinessTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject business?'**
+  String get rejectBusinessTitle;
+
+  /// No description provided for @rejectionReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejection reason'**
+  String get rejectionReason;
+
+  /// No description provided for @verificationActionSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification request processed successfully.'**
+  String get verificationActionSuccess;
+
+  /// No description provided for @verificationActionFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to process verification request. Please try again.'**
+  String get verificationActionFailed;
+
   /// No description provided for @investorManagement.
   ///
   /// In en, this message translates to:
@@ -931,6 +997,588 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Yesterday'**
   String get yesterday;
+
+  /// No description provided for @userManagement.
+  ///
+  /// In en, this message translates to:
+  /// **'User management'**
+  String get userManagement;
+
+  /// No description provided for @searchUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Search users'**
+  String get searchUsers;
+
+  /// No description provided for @userRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Role'**
+  String get userRole;
+
+  /// No description provided for @allUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'All users'**
+  String get allUsers;
+
+  /// No description provided for @investor.
+  ///
+  /// In en, this message translates to:
+  /// **'Investor'**
+  String get investor;
+
+  /// No description provided for @businessOwner.
+  ///
+  /// In en, this message translates to:
+  /// **'Business owner'**
+  String get businessOwner;
+
+  /// No description provided for @userStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get userStatus;
+
+  /// No description provided for @name.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get name;
+
+  /// No description provided for @phone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get phone;
+
+  /// No description provided for @userDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'User details'**
+  String get userDetails;
+
+  /// No description provided for @viewUser.
+  ///
+  /// In en, this message translates to:
+  /// **'View user'**
+  String get viewUser;
+
+  /// No description provided for @suspend.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspend'**
+  String get suspend;
+
+  /// No description provided for @activate.
+  ///
+  /// In en, this message translates to:
+  /// **'Activate'**
+  String get activate;
+
+  /// No description provided for @changeUserStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Change user status'**
+  String get changeUserStatus;
+
+  /// No description provided for @changeUserStatusMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to {action} {name}?'**
+  String changeUserStatusMessage(String name, String action);
+
+  /// No description provided for @noUsersFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No users match your filters.'**
+  String get noUsersFound;
+
+  /// No description provided for @searchDeals.
+  ///
+  /// In en, this message translates to:
+  /// **'Search businesses or investors'**
+  String get searchDeals;
+
+  /// No description provided for @dealStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Deal status'**
+  String get dealStatus;
+
+  /// No description provided for @approved.
+  ///
+  /// In en, this message translates to:
+  /// **'Approved'**
+  String get approved;
+
+  /// No description provided for @rejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get rejected;
+
+  /// No description provided for @completed.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get completed;
+
+  /// No description provided for @dealDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Deal details'**
+  String get dealDetails;
+
+  /// No description provided for @investmentAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Investment amount'**
+  String get investmentAmount;
+
+  /// No description provided for @expectedReturn.
+  ///
+  /// In en, this message translates to:
+  /// **'Expected return'**
+  String get expectedReturn;
+
+  /// No description provided for @viewDeal.
+  ///
+  /// In en, this message translates to:
+  /// **'View deal'**
+  String get viewDeal;
+
+  /// No description provided for @noDealsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No deals match your filters.'**
+  String get noDealsFound;
+
+  /// No description provided for @approveProposalTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve proposal?'**
+  String get approveProposalTitle;
+
+  /// No description provided for @approveProposalMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve the investment proposal for {business}?'**
+  String approveProposalMessage(String business);
+
+  /// No description provided for @rejectProposalTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject proposal?'**
+  String get rejectProposalTitle;
+
+  /// No description provided for @rejectProposalMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject the investment proposal for {business}?'**
+  String rejectProposalMessage(String business);
+
+  /// No description provided for @dealActionSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Deal proposal updated successfully.'**
+  String get dealActionSuccess;
+
+  /// No description provided for @dealActionFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to update deal proposal. Please try again.'**
+  String get dealActionFailed;
+
+  /// No description provided for @profitDistribution.
+  ///
+  /// In en, this message translates to:
+  /// **'Profit Distribution'**
+  String get profitDistribution;
+
+  /// No description provided for @totalProfit.
+  ///
+  /// In en, this message translates to:
+  /// **'Total profit'**
+  String get totalProfit;
+
+  /// No description provided for @investorPayouts.
+  ///
+  /// In en, this message translates to:
+  /// **'Investor payouts'**
+  String get investorPayouts;
+
+  /// No description provided for @pendingPayouts.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending payouts'**
+  String get pendingPayouts;
+
+  /// No description provided for @searchProfitDistributions.
+  ///
+  /// In en, this message translates to:
+  /// **'Search businesses or investors'**
+  String get searchProfitDistributions;
+
+  /// No description provided for @payoutStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Payout status'**
+  String get payoutStatus;
+
+  /// No description provided for @processing.
+  ///
+  /// In en, this message translates to:
+  /// **'Processing'**
+  String get processing;
+
+  /// No description provided for @paid.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid'**
+  String get paid;
+
+  /// No description provided for @failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get failed;
+
+  /// No description provided for @investorYield.
+  ///
+  /// In en, this message translates to:
+  /// **'Investor yield'**
+  String get investorYield;
+
+  /// No description provided for @distributionDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Distribution date'**
+  String get distributionDate;
+
+  /// No description provided for @triggerPayout.
+  ///
+  /// In en, this message translates to:
+  /// **'Trigger payout'**
+  String get triggerPayout;
+
+  /// No description provided for @retryPayout.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry payout'**
+  String get retryPayout;
+
+  /// No description provided for @triggerPayoutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Trigger payout?'**
+  String get triggerPayoutTitle;
+
+  /// No description provided for @triggerPayoutMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Start the payout process for {investor}?'**
+  String triggerPayoutMessage(String investor);
+
+  /// No description provided for @noProfitDistributions.
+  ///
+  /// In en, this message translates to:
+  /// **'No profit distributions match your filters.'**
+  String get noProfitDistributions;
+
+  /// No description provided for @profitLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to load profit distributions. Please try again.'**
+  String get profitLoadFailed;
+
+  /// No description provided for @payoutFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to update the payout. Please try again.'**
+  String get payoutFailed;
+
+  /// No description provided for @reportsAnalytics.
+  ///
+  /// In en, this message translates to:
+  /// **'Reports & Analytics'**
+  String get reportsAnalytics;
+
+  /// No description provided for @platformVolume.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform volume'**
+  String get platformVolume;
+
+  /// No description provided for @dealSuccessRate.
+  ///
+  /// In en, this message translates to:
+  /// **'Deal success rate'**
+  String get dealSuccessRate;
+
+  /// No description provided for @totalUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Total users'**
+  String get totalUsers;
+
+  /// No description provided for @newUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'New users'**
+  String get newUsers;
+
+  /// No description provided for @platformRevenue.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform revenue'**
+  String get platformRevenue;
+
+  /// No description provided for @volumeTrend.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform volume trend'**
+  String get volumeTrend;
+
+  /// No description provided for @userGrowth.
+  ///
+  /// In en, this message translates to:
+  /// **'User growth'**
+  String get userGrowth;
+
+  /// No description provided for @revenueTrend.
+  ///
+  /// In en, this message translates to:
+  /// **'Revenue trend'**
+  String get revenueTrend;
+
+  /// No description provided for @selectDateRange.
+  ///
+  /// In en, this message translates to:
+  /// **'Select date range'**
+  String get selectDateRange;
+
+  /// No description provided for @exportReport.
+  ///
+  /// In en, this message translates to:
+  /// **'Export report'**
+  String get exportReport;
+
+  /// No description provided for @chooseExportFormat.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose an export format.'**
+  String get chooseExportFormat;
+
+  /// No description provided for @reportExported.
+  ///
+  /// In en, this message translates to:
+  /// **'Report generated: {fileName}'**
+  String reportExported(String fileName);
+
+  /// No description provided for @reportsLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to load analytics data. Please try again.'**
+  String get reportsLoadFailed;
+
+  /// No description provided for @searchCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Search categories'**
+  String get searchCategories;
+
+  /// No description provided for @addCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Add category'**
+  String get addCategory;
+
+  /// No description provided for @editCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit category'**
+  String get editCategory;
+
+  /// No description provided for @deleteCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete category'**
+  String get deleteCategory;
+
+  /// No description provided for @categoryName.
+  ///
+  /// In en, this message translates to:
+  /// **'Category name'**
+  String get categoryName;
+
+  /// No description provided for @categoryDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get categoryDescription;
+
+  /// No description provided for @categoryIcon.
+  ///
+  /// In en, this message translates to:
+  /// **'Icon name'**
+  String get categoryIcon;
+
+  /// No description provided for @categoryStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Category status'**
+  String get categoryStatus;
+
+  /// No description provided for @inactive.
+  ///
+  /// In en, this message translates to:
+  /// **'Inactive'**
+  String get inactive;
+
+  /// No description provided for @businessesCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} businesses'**
+  String businessesCount(int count);
+
+  /// No description provided for @categoryActionSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Category updated successfully.'**
+  String get categoryActionSuccess;
+
+  /// No description provided for @categoryActionFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to update category. Please try again.'**
+  String get categoryActionFailed;
+
+  /// No description provided for @categoriesLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to load categories. Please try again.'**
+  String get categoriesLoadFailed;
+
+  /// No description provided for @noCategoriesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No categories match your search.'**
+  String get noCategoriesFound;
+
+  /// No description provided for @totalNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Total notifications'**
+  String get totalNotifications;
+
+  /// No description provided for @sentNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Sent notifications'**
+  String get sentNotifications;
+
+  /// No description provided for @totalRecipients.
+  ///
+  /// In en, this message translates to:
+  /// **'Total recipients'**
+  String get totalRecipients;
+
+  /// No description provided for @broadcastNotification.
+  ///
+  /// In en, this message translates to:
+  /// **'Broadcast notification'**
+  String get broadcastNotification;
+
+  /// No description provided for @searchNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Search notifications'**
+  String get searchNotifications;
+
+  /// No description provided for @recipientAudience.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient audience'**
+  String get recipientAudience;
+
+  /// No description provided for @allRecipients.
+  ///
+  /// In en, this message translates to:
+  /// **'All recipients'**
+  String get allRecipients;
+
+  /// No description provided for @notificationStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Notification status'**
+  String get notificationStatus;
+
+  /// No description provided for @notificationSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Sent'**
+  String get notificationSent;
+
+  /// No description provided for @notificationPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get notificationPending;
+
+  /// No description provided for @notificationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get notificationFailed;
+
+  /// No description provided for @notificationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get notificationTitle;
+
+  /// No description provided for @notificationMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get notificationMessage;
+
+  /// No description provided for @sendNotification.
+  ///
+  /// In en, this message translates to:
+  /// **'Send notification'**
+  String get sendNotification;
+
+  /// No description provided for @recipients.
+  ///
+  /// In en, this message translates to:
+  /// **'recipients'**
+  String get recipients;
+
+  /// No description provided for @resend.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend'**
+  String get resend;
+
+  /// No description provided for @noNotificationsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No notifications match your filters.'**
+  String get noNotificationsFound;
+
+  /// No description provided for @notificationsLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to load notifications. Please try again.'**
+  String get notificationsLoadFailed;
+
+  /// No description provided for @notificationActionFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to send the notification. Please try again.'**
+  String get notificationActionFailed;
 }
 
 class _AppLocalizationsDelegate

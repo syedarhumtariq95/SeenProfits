@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../configs/dependency_injection/dependency_injection.dart';
 import '../../../configs/localization/localization_extensions.dart';
@@ -237,14 +238,12 @@ class _QuickActionsCard extends StatelessWidget {
           DashboardQuickAction(
               label: context.l10n.reviewPendingBusiness,
               icon: Icons.verified_user_outlined,
-              onPressed: () => Navigator.of(context)
-                  .pushNamed(AdminRouteNames.verification)),
+              onPressed: () => context.push(AdminRouteNames.verification)),
           const SizedBox(height: 12),
           DashboardQuickAction(
               label: context.l10n.viewReports,
               icon: Icons.flag_outlined,
-              onPressed: () =>
-                  Navigator.of(context).pushNamed(AdminRouteNames.reports)),
+              onPressed: () => context.push(AdminRouteNames.reports)),
         ]),
       ));
 }

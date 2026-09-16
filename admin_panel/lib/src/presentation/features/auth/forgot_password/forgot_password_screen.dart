@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../configs/localization/localization_extensions.dart';
 import '../../../../configs/router/admin_routes.dart';
@@ -93,9 +94,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
                 const SizedBox(height: 12),
                 TextButton.icon(
-                  onPressed: () => Navigator.of(context).pushReplacementNamed(
-                    AdminRouteNames.login,
-                  ),
+                  onPressed: () => context.go(AdminRouteNames.login),
                   icon: const Icon(Icons.arrow_back),
                   label: Text(l10n.backToLogin),
                 ),

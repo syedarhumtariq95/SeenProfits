@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../configs/localization/localization_extensions.dart';
 import '../../../../configs/router/admin_routes.dart';
@@ -72,10 +73,7 @@ class _AdminTwoFactorScreenState extends State<AdminTwoFactorScreen> {
       listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
         if (state.status == AdminAuthStatus.authenticated) {
-          Navigator.of(context).pushNamedAndRemoveUntil(
-            AdminRouteNames.dashboard,
-            (route) => false,
-          );
+          context.go(AdminRouteNames.dashboard);
         }
       },
       builder: (context, state) {
@@ -139,9 +137,7 @@ class _AdminTwoFactorScreenState extends State<AdminTwoFactorScreen> {
                       .read<AdminAuthCubit>()
                       .cancelTwoFactorChallenge();
                   if (context.mounted) {
-                    Navigator.of(context).pushReplacementNamed(
-                      AdminRouteNames.login,
-                    );
+                    context.go(AdminRouteNames.login);
                   }
                 },
                 icon: const Icon(Icons.arrow_back),

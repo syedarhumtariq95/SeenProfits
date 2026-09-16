@@ -10,6 +10,7 @@ class AdminRouteNames {
   static const investors = '/investors';
   static const businessOwners = '/business-owners';
   static const investmentRequests = '/investment-requests';
+  static const profitDistribution = '/profit-distribution';
   static const reports = '/reports';
   static const categories = '/categories';
   static const notifications = '/notifications';

@@ -28,7 +28,8 @@ class VerificationRequest {
         cnic: cnic,
         documents: documents,
         status: status ?? this.status,
-        rejectionReason:
-            clearRejectionReason ? null : rejectionReason ?? this.rejectionReason,
+        rejectionReason: clearRejectionReason
+            ? null
+            : rejectionReason ?? this.rejectionReason,
       );
 }

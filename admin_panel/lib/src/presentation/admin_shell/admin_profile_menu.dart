@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../configs/dependency_injection/dependency_injection.dart';
 import '../../configs/localization/localization_extensions.dart';
@@ -44,11 +45,11 @@ class AdminProfileMenu extends StatelessWidget {
   }
 
   Future<void> _onSelected(
-      BuildContext context,
-      _AdminProfileAction action,
-      ) async {
+    BuildContext context,
+    _AdminProfileAction action,
+  ) async {
     if (action == _AdminProfileAction.settings) {
-      Navigator.of(context).pushNamed(AdminRouteNames.settings);
+      context.push(AdminRouteNames.settings);
       return;
     }
 
@@ -74,10 +75,7 @@ class AdminProfileMenu extends StatelessWidget {
     }
     await context.read<AdminAuthCubit>().logout();
     if (context.mounted) {
-      Navigator.of(context).pushNamedAndRemoveUntil(
-        AdminRouteNames.login,
-            (route) => false,
-      );
+      context.go(AdminRouteNames.login);
     }
   }
 }

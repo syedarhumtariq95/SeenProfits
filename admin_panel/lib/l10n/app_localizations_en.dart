@@ -18,6 +18,43 @@ class AppLocalizationsEn extends AppLocalizations {
   String get verificationQueue => 'Verification Queue';
 
   @override
+  String get noPendingVerifications => 'No pending verification requests.';
+
+  @override
+  String get cnicLabel => 'CNIC';
+
+  @override
+  String get documentsLabel => 'Documents';
+
+  @override
+  String get approve => 'Approve';
+
+  @override
+  String get reject => 'Reject';
+
+  @override
+  String get approveBusinessTitle => 'Approve business?';
+
+  @override
+  String approveBusinessMessage(String business) {
+    return 'Approve $business for verification?';
+  }
+
+  @override
+  String get rejectBusinessTitle => 'Reject business?';
+
+  @override
+  String get rejectionReason => 'Rejection reason';
+
+  @override
+  String get verificationActionSuccess =>
+      'Verification request processed successfully.';
+
+  @override
+  String get verificationActionFailed =>
+      'Unable to process verification request. Please try again.';
+
+  @override
   String get investorManagement => 'Investor Management';
 
   @override
@@ -457,4 +494,315 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get userManagement => 'User management';
+
+  @override
+  String get searchUsers => 'Search users';
+
+  @override
+  String get userRole => 'Role';
+
+  @override
+  String get allUsers => 'All users';
+
+  @override
+  String get investor => 'Investor';
+
+  @override
+  String get businessOwner => 'Business owner';
+
+  @override
+  String get userStatus => 'Status';
+
+  @override
+  String get name => 'Name';
+
+  @override
+  String get phone => 'Phone';
+
+  @override
+  String get userDetails => 'User details';
+
+  @override
+  String get viewUser => 'View user';
+
+  @override
+  String get suspend => 'Suspend';
+
+  @override
+  String get activate => 'Activate';
+
+  @override
+  String get changeUserStatus => 'Change user status';
+
+  @override
+  String changeUserStatusMessage(String name, String action) {
+    return 'Are you sure you want to $action $name?';
+  }
+
+  @override
+  String get noUsersFound => 'No users match your filters.';
+
+  @override
+  String get searchDeals => 'Search businesses or investors';
+
+  @override
+  String get dealStatus => 'Deal status';
+
+  @override
+  String get approved => 'Approved';
+
+  @override
+  String get rejected => 'Rejected';
+
+  @override
+  String get completed => 'Completed';
+
+  @override
+  String get dealDetails => 'Deal details';
+
+  @override
+  String get investmentAmount => 'Investment amount';
+
+  @override
+  String get expectedReturn => 'Expected return';
+
+  @override
+  String get viewDeal => 'View deal';
+
+  @override
+  String get noDealsFound => 'No deals match your filters.';
+
+  @override
+  String get approveProposalTitle => 'Approve proposal?';
+
+  @override
+  String approveProposalMessage(String business) {
+    return 'Approve the investment proposal for $business?';
+  }
+
+  @override
+  String get rejectProposalTitle => 'Reject proposal?';
+
+  @override
+  String rejectProposalMessage(String business) {
+    return 'Reject the investment proposal for $business?';
+  }
+
+  @override
+  String get dealActionSuccess => 'Deal proposal updated successfully.';
+
+  @override
+  String get dealActionFailed =>
+      'Unable to update deal proposal. Please try again.';
+
+  @override
+  String get profitDistribution => 'Profit Distribution';
+
+  @override
+  String get totalProfit => 'Total profit';
+
+  @override
+  String get investorPayouts => 'Investor payouts';
+
+  @override
+  String get pendingPayouts => 'Pending payouts';
+
+  @override
+  String get searchProfitDistributions => 'Search businesses or investors';
+
+  @override
+  String get payoutStatus => 'Payout status';
+
+  @override
+  String get processing => 'Processing';
+
+  @override
+  String get paid => 'Paid';
+
+  @override
+  String get failed => 'Failed';
+
+  @override
+  String get investorYield => 'Investor yield';
+
+  @override
+  String get distributionDate => 'Distribution date';
+
+  @override
+  String get triggerPayout => 'Trigger payout';
+
+  @override
+  String get retryPayout => 'Retry payout';
+
+  @override
+  String get triggerPayoutTitle => 'Trigger payout?';
+
+  @override
+  String triggerPayoutMessage(String investor) {
+    return 'Start the payout process for $investor?';
+  }
+
+  @override
+  String get noProfitDistributions =>
+      'No profit distributions match your filters.';
+
+  @override
+  String get profitLoadFailed =>
+      'Unable to load profit distributions. Please try again.';
+
+  @override
+  String get payoutFailed => 'Unable to update the payout. Please try again.';
+
+  @override
+  String get reportsAnalytics => 'Reports & Analytics';
+
+  @override
+  String get platformVolume => 'Platform volume';
+
+  @override
+  String get dealSuccessRate => 'Deal success rate';
+
+  @override
+  String get totalUsers => 'Total users';
+
+  @override
+  String get newUsers => 'New users';
+
+  @override
+  String get platformRevenue => 'Platform revenue';
+
+  @override
+  String get volumeTrend => 'Platform volume trend';
+
+  @override
+  String get userGrowth => 'User growth';
+
+  @override
+  String get revenueTrend => 'Revenue trend';
+
+  @override
+  String get selectDateRange => 'Select date range';
+
+  @override
+  String get exportReport => 'Export report';
+
+  @override
+  String get chooseExportFormat => 'Choose an export format.';
+
+  @override
+  String reportExported(String fileName) {
+    return 'Report generated: $fileName';
+  }
+
+  @override
+  String get reportsLoadFailed =>
+      'Unable to load analytics data. Please try again.';
+
+  @override
+  String get searchCategories => 'Search categories';
+
+  @override
+  String get addCategory => 'Add category';
+
+  @override
+  String get editCategory => 'Edit category';
+
+  @override
+  String get deleteCategory => 'Delete category';
+
+  @override
+  String get categoryName => 'Category name';
+
+  @override
+  String get categoryDescription => 'Description';
+
+  @override
+  String get categoryIcon => 'Icon name';
+
+  @override
+  String get categoryStatus => 'Category status';
+
+  @override
+  String get inactive => 'Inactive';
+
+  @override
+  String businessesCount(int count) {
+    return '$count businesses';
+  }
+
+  @override
+  String get categoryActionSuccess => 'Category updated successfully.';
+
+  @override
+  String get categoryActionFailed =>
+      'Unable to update category. Please try again.';
+
+  @override
+  String get categoriesLoadFailed =>
+      'Unable to load categories. Please try again.';
+
+  @override
+  String get noCategoriesFound => 'No categories match your search.';
+
+  @override
+  String get totalNotifications => 'Total notifications';
+
+  @override
+  String get sentNotifications => 'Sent notifications';
+
+  @override
+  String get totalRecipients => 'Total recipients';
+
+  @override
+  String get broadcastNotification => 'Broadcast notification';
+
+  @override
+  String get searchNotifications => 'Search notifications';
+
+  @override
+  String get recipientAudience => 'Recipient audience';
+
+  @override
+  String get allRecipients => 'All recipients';
+
+  @override
+  String get notificationStatus => 'Notification status';
+
+  @override
+  String get notificationSent => 'Sent';
+
+  @override
+  String get notificationPending => 'Pending';
+
+  @override
+  String get notificationFailed => 'Failed';
+
+  @override
+  String get notificationTitle => 'Title';
+
+  @override
+  String get notificationMessage => 'Message';
+
+  @override
+  String get sendNotification => 'Send notification';
+
+  @override
+  String get recipients => 'recipients';
+
+  @override
+  String get resend => 'Resend';
+
+  @override
+  String get noNotificationsFound => 'No notifications match your filters.';
+
+  @override
+  String get notificationsLoadFailed =>
+      'Unable to load notifications. Please try again.';
+
+  @override
+  String get notificationActionFailed =>
+      'Unable to send the notification. Please try again.';
 }

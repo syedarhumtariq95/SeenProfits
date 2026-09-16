@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../configs/localization/localization_extensions.dart';
 import '../../../configs/router/admin_routes.dart';
@@ -27,8 +28,8 @@ class DashboardPlaceholderScreen extends StatelessWidget {
               final columns = constraints.maxWidth >= 1040
                   ? 4
                   : constraints.maxWidth >= AdminBreakpoints.tablet
-                  ? 2
-                  : 1;
+                      ? 2
+                      : 1;
               return GridView.count(
                 crossAxisCount: columns,
                 shrinkWrap: true,
@@ -78,7 +79,11 @@ class DashboardPlaceholderScreen extends StatelessWidget {
                     )
                   : Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [activityCard, const SizedBox(height: 16), actionsCard],
+                      children: [
+                        activityCard,
+                        const SizedBox(height: 16),
+                        actionsCard
+                      ],
                     );
             },
           ),
@@ -98,7 +103,8 @@ class _RecentActivityCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(l10n.recentActivity, style: Theme.of(context).textTheme.titleLarge),
+            Text(l10n.recentActivity,
+                style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 12),
             Text(l10n.recentActivityPlaceholder),
           ],
@@ -118,22 +124,19 @@ class _QuickActionsCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(l10n.quickActions, style: Theme.of(context).textTheme.titleLarge),
+            Text(l10n.quickActions,
+                style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 16),
             DashboardQuickAction(
               label: l10n.reviewPendingBusiness,
               icon: Icons.verified_user_outlined,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AdminRouteNames.verification,
-              ),
+              onPressed: () => context.push(AdminRouteNames.verification),
             ),
             const SizedBox(height: 12),
             DashboardQuickAction(
               label: l10n.viewReports,
               icon: Icons.flag_outlined,
-              onPressed: () => Navigator.of(context).pushNamed(
-                AdminRouteNames.reports,
-              ),
+              onPressed: () => context.push(AdminRouteNames.reports),
             ),
           ],
         ),

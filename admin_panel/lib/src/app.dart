@@ -6,7 +6,6 @@ import 'configs/dependency_injection/dependency_injection.dart';
 import 'configs/localization/admin_locale_cubit.dart';
 import 'configs/localization/localization_extensions.dart';
 import 'configs/router/admin_router.dart';
-import 'configs/router/admin_routes.dart';
 import 'configs/theme/admin_theme_config.dart';
 import 'presentation/features/auth/bloc/admin_auth_cubit.dart';
 
@@ -25,15 +24,14 @@ class AdminApp extends StatelessWidget {
         ),
       ],
       child: BlocBuilder<AdminLocaleCubit, Locale>(
-        builder: (context, locale) => MaterialApp(
+        builder: (context, locale) => MaterialApp.router(
           debugShowCheckedModeBanner: false,
           onGenerateTitle: (context) => context.l10n.appName,
           locale: locale,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           theme: AdminThemeConfig.theme,
-          initialRoute: AdminRouteNames.login,
-          onGenerateRoute: AdminRouter.onGenerateRoute,
+          routerConfig: AdminRouter.router,
         ),
       ),
     );

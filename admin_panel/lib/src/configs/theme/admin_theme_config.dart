@@ -14,7 +14,11 @@ class AdminThemeConfig {
       primary: AdminThemeColors.purple,
       secondary: AdminThemeColors.pink,
       surface: AdminThemeColors.surface,
+      primaryContainer: AdminThemeColors.deepPurple,
+      secondaryContainer: AdminThemeColors.accent,
       onSurface: AdminThemeColors.text,
+      onPrimary: AdminThemeColors.text,
+      onSecondary: AdminThemeColors.text,
       outline: AdminThemeColors.outline,
     ),
     appBarTheme: const AppBarTheme(
@@ -25,7 +29,11 @@ class AdminThemeConfig {
     cardTheme: CardThemeData(
       color: AdminThemeColors.surface,
       elevation: 0,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      margin: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(16)),
+        side: BorderSide(color: AdminThemeColors.outline),
+      ),
     ),
     dividerTheme: const DividerThemeData(color: AdminThemeColors.outline),
     inputDecorationTheme: InputDecorationTheme(
